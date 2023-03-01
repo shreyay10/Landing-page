@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="images/logo1.png" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Community</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="btn" id="btn1">Log In</button>
+        <button class="btn" id="btn2">Sign Up</button>
+      </div>
+      <div class="content">
+        <div class="text">
+          <h1>
+            surround yourself with pizza,<br />
+            <span> not negativity </span>
+          </h1>
+          <p>
+            Pizza seems to be the all-around best food to bring people together, <br>and it’s also a great food.
+            <br />You can’t buy happiness, but you can buy pizza and that’s pretty much the same thing.
+
+            <br />Delicious and Refreshing!!
+          </p>
+          <button class="btn3">Buy Now</button>
+        </div>
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              
+              <img src="images/p1.jpg" style="width:100%">
+             
+            </div>
+            
+            <div class="mySlides fade">
+             
+              <img src="images/p2.jpg" style="width:100%">
+             
+            </div>
+            
+            <div class="mySlides fade">
+              
+              <img src="images/p3.jpg" style="width:100%">
+              
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div><script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }</script>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
